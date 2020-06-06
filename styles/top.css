@@ -12,16 +12,8 @@ a{text-align: center;text-decoration: none}
 .nav a{float: left;width: 22%;line-height: 40px;text-decoration: none;font-size: 90%;color: white}
 .nav li a:hover{background-color: white;color: #00517d;text-decoration: none}
 
-.background{float: left;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    -webkit-filter: blur(15px);
-    -moz-filter: blur(15px);
-    -o-filter: blur(15px);
-    -ms-filter: blur(15px);
-    filter: blur(15px);}
+.bigger{transition : -webkit-transform 0.5s;/*延迟效果*/}
+.bigger:hover {transform: scale(1.2,1.2);/*放大的倍数*/}
 
 .container{width:100%;min-height: calc(100vh - 75px)}
 .mainbox{width:100%;padding-bottom: 30px}
