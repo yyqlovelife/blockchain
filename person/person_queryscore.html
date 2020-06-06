@@ -21,13 +21,18 @@
             </ul>
         </div>
     </div>
-    <div class="center-in-center" style="background-color:whitesmoke;width: 500px;height: 200px;border-radius: 20px;text-align: center" >
-        <p style="color: grey;font-size: 30px;text-align: center;font-weight: lighter;padding-top: 20px">关于您的积分</p>
-        <p style="color: grey;font-size: 20px;text-align: center;font-weight: lighter;padding-top: 20px">您的积分数额为：</p>
+    <div class="mainbox">
+        <div class="center-in-center" style="margin: 0 auto;width: 20%;height: 35%;background-color:rgba(255,255,255,0.6);text-align: center;">
+            <h2 style="padding-top: 40px;padding-bottom: 30px;color: dimgrey;font-weight: lighter">积分查询</h2>
+            <input id="yourpublic" style="width: 75%;height: 12%;text-align: left;border: none" type="text" placeholder="您的公钥" >
+            <input id="yourprivate" style="width: 75%;height: 12%;text-align: left;border: none;margin-top: 20px;margin-bottom: 10px" type="password" placeholder="您的私钥">
+            <button style="width: 40%;height: 12%;margin-top: 15px;cursor: pointer;;background-color: #00517d;color: white;border: none" onclick="showscore()">确定</button>
+        </div>
     </div>
+    <script src="../js/person_function.js"></script>
 </div>
 
-<div class="footer" style="background-color: #00507C">
+<div class="footer" >
     <p style="text-align: center;color: darkgrey;font-size: 12px;">
         相关连接跳转：
         <a href="http://www.ccb.com/cn/home/indexv3.html"  target="_blank" style="color: darkgrey;font-size: 12px">
