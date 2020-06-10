@@ -16,7 +16,22 @@ function present(){
         return false;
     }
     else {
-        alert('转赠成功，请尽快通知您的好友')
+        $.ajax({
+            //几个参数需要注意一下
+            type: "POST",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "" ,//url
+            data: $('#form_present').serialize(),
+            success: function (result) {
+                console.log(result);//打印服务端返回的数据(调试用)
+                    if (result.resultCode == 200) {
+                        alert('转赠成功，请尽快通知您的好友')
+                    };
+            },
+            error : function() {
+                alert("异常！");
+            }
+        });
     }
     action="#";
     submit();

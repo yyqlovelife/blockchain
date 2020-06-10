@@ -26,11 +26,13 @@
     <div class="mainbox">
         <div class="center-in-center" style="margin: 0 auto;width: 20%;height: 55%;background-color:rgba(255,255,255,0.6);text-align: center;">
             <h2 style="padding-top: 40px;padding-bottom: 30px;color: dimgrey;font-weight: lighter">好友转赠</h2>
-            <input id="yourpublic" style="width: 75%;height: 10%;text-align: left;border: none" type="text" placeholder="您的公钥" name="yourpublic" >
-            <input id="friendpublic" style="width: 75%;height: 10%;text-align: left;border: none;margin-top: 20px" type="text" placeholder="好友公钥" name="friendpublic">
-            <input id="number" style="width: 75%;height: 10%;text-align: left;border: none;margin-top: 20px" type="text" placeholder="您的转赠额度" name="number">
-            <input id="yourprivate" style="width: 75%;height: 10%;text-align: left;border: none;margin-top: 20px;margin-bottom: 10px" type="password" placeholder="您的积分私钥" name="yourprivate">
-            <button style="width: 40%;height: 8%;margin-top: 5px;cursor: pointer;;background-color: #00517d;color: white;border: none" onclick="present()">确定</button>
+            <form id="form_present" onsubmit="return false" action="##" method="post" style="height: 100%;width: 100%">
+                <input id="yourpublic" style="width: 75%;height: 10%;text-align: left;border: none" type="text" placeholder="您的公钥" name="yourpublic" >
+                <input id="friendpublic" style="width: 75%;height: 10%;text-align: left;border: none;margin-top: 20px" type="text" placeholder="好友公钥" name="friendpublic">
+                <input id="number" style="width: 75%;height: 10%;text-align: left;border: none;margin-top: 20px" type="text" placeholder="您的转赠额度" name="number">
+                <input id="yourprivate" style="width: 75%;height: 10%;text-align: left;border: none;margin-top: 20px;margin-bottom: 10px" type="password" placeholder="您的积分私钥" name="yourprivate">
+                <button style="width: 40%;height: 8%;margin-top: 5px;cursor: pointer;;background-color: #00517d;color: white;border: none" onclick="present()">确定</button>
+            </form>
         </div>
         <!--<form name="form1" action="" method="post">
             <h1>好友积分转赠</h1>
