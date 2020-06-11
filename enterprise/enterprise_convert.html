@@ -8,7 +8,11 @@
     <title>CCBLOCK-企业积分授信</title>
     <link href="../styles/top.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../styles/form.css">
+    <script src="../js/form.js"></script>
+    <script src="../js/jquery-3.5.1.min.js"></script>
 </head>
+
+
 <body style="background-image:url('../imgs/雪山绿谷.jpg');background-repeat: no-repeat;background-size: 100% 100%">
 <div class="container">
     <div class="menu">
@@ -52,25 +56,25 @@
                         <div class="cont_form_login" style="opacity: 0; display: none;">
                             <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
                             <h2>积分授信</h2>
-                            <input type="text" placeholder="您的积分公钥" >
-                            <input type="text" placeholder="申请积分数额">
-                            <input type="text" placeholder="您的建设银行卡号">
-                            <input type="password" placeholder="您的积分私钥">
-                            <button class="btn_login" onclick="cambiar_login()">确定</button>
+                            <input id="yourpublic1" type="text" placeholder="您的积分公钥" >
+                            <input id="score_number1" type="text" placeholder="申请积分数额">
+                            <input id="card_number1" type="text" placeholder="您的建设银行卡号">
+                            <input id="yourprivate1" type="password" placeholder="您的积分私钥">
+                            <button id="applybtn" class="btn_login" onclick="apply()">确定</button>
                         </div>
                         <div class="cont_form_sign_up" style="display: block; opacity: 1;">
                             <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
                             <h2>积分承兑</h2>
-                            <input type="text" placeholder="您的积分公钥">
-                            <input type="text" placeholder="兑换积分数额">
-                            <input type="text" placeholder="您的建设银行卡号">
-                            <input type="password" placeholder="您的积分私钥">
-                            <button class="btn_sign_up" onclick="cambiar_sign_up()">提交</button>
+                            <input id="yourpublic2" type="text" placeholder="您的积分公钥">
+                            <input id="score_number2" type="text" placeholder="承兑积分数额">
+                            <input id="card_number2" type="text" placeholder="您的建设银行卡号">
+                            <input id="yourprivate2" type="password" placeholder="您的积分私钥">
+                            <button id="convertbtn" class="btn_sign_up" onclick="convert()">提交</button>
                         </div>
                     </div>
                 </div>
             </div>
-        <script src="../js/form.js"></script>
+
     </div>
 </div>
 
