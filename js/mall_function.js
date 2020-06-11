@@ -1,5 +1,4 @@
 function moneybuy(score_number) {
-
     $.ajax({
         type: "POST",//HTTP请求方法类型
         dataType: "json",//预期前端发给后端的数据类型
@@ -17,7 +16,6 @@ function moneybuy(score_number) {
 }
 
 function scorebuy(score_number) {
-
     $.ajax({
         type: "POST",//HTTP请求方法类型
         dataType: "json",//预期前端发给后端的数据类型
