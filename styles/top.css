@@ -14,7 +14,7 @@ a{text-align: center;text-decoration: none}
 
 .menuu{background-color: #00517d}
 .navv{background-color: #00517d;margin:0 auto;width: 45%;height: 40px}
-.navv a{float: left;width: 18%;line-height: 40px;text-decoration: none;font-size: 90%;color: white}
+.navv a{float: left;width: 18%;line-height: 40px;text-decoration: none;font-size: 83%;color: white}
 .navv li a:hover{background-color: white;color: #00517d;text-decoration: none}
 
 .bigger{transition : -webkit-transform 0.5s;/*延迟效果*/}
