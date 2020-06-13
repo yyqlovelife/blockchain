@@ -17,6 +17,11 @@ a{text-align: center;text-decoration: none}
 .navv a{float: left;width: 18%;line-height: 40px;text-decoration: none;font-size: 83%;color: white}
 .navv li a:hover{background-color: white;color: #00517d;text-decoration: none}
 
+.time{color: #757575;padding-right: 100px;padding-left: 30px}
+
+
+
+
 .bigger{transition : -webkit-transform 0.5s;/*延迟效果*/}
 .bigger:hover {transform: scale(1.2,1.2);/*放大的倍数*/}
 
