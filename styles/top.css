@@ -17,8 +17,9 @@ a{text-align: center;text-decoration: none}
 .navv a{float: left;width: 18%;line-height: 40px;text-decoration: none;font-size: 83%;color: white}
 .navv li a:hover{background-color: white;color: #00517d;text-decoration: none}
 
-.time{color: #757575;padding-right: 100px;padding-left: 30px}
-
+.time{color: #757575;padding-left: 30px;width: 20%}
+.historytable{table-layout: fixed;width: 100%}
+.historytable td{word-wrap: break-word;column-span: 2}
 
 
 
