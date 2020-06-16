@@ -11,13 +11,13 @@ function cambiar_login() {
 }
 
 function apply() {
-    var yourpublic1=$("#yourpublic1").val();
-    var yourprivate1=$("#yourprivate1").val();
+    var id1=$("#id1").val();
+    var password1=$("#password1").val();
     var card_number1=$("#card_number1").val();
     var score_number1=$("#score_number1").val();
 
-    if(yourpublic1==''){
-        alert('您的公钥不能为空！');
+    if(id1==''){
+        alert('您的用户名不能为空！');
         return false;
     }
     if(score_number1==''){
@@ -28,8 +28,8 @@ function apply() {
         alert('银行卡号不能为空！');
         return false;
     }
-    if(yourprivate1==''){
-        alert('您的私钥不能为空！');
+    if(password1==''){
+        alert('您的密码不能为空！');
         return false;
     }
     else {
@@ -38,7 +38,7 @@ function apply() {
             dataType: "json",//预期前端发给后端的数据类型
             url: "http://localhost:8080/api/applyscore",//url地址
             data: {
-                'yourpublic1': yourpublic1, 'yourprivate1': yourprivate1,
+                'id1': id1, 'password1': password1,
                 'card_number1': card_number1, 'score_number1': score_number1
             },
             success: function (result) {
@@ -68,13 +68,13 @@ setTimeout(function(){   document.querySelector('.cont_form_login').style.displa
 }    
 
 function convert() {
-    var yourpublic2=$("#yourpublic2").val();
-    var yourprivate2=$("#yourprivate2").val();
+    var id2=$("#id2").val();
+    var password2=$("#password2").val();
     var card_number2=$("#card_number2").val();
     var score_number2=$("#score_number2").val();
 
-    if(yourpublic2==''){
-        alert('您的公钥不能为空！');
+    if(id2==''){
+        alert('您的用户名不能为空！');
         return false;
     }
     if(score_number2==''){
@@ -85,8 +85,8 @@ function convert() {
         alert('银行卡号不能为空！');
         return false;
     }
-    if(yourprivate2==''){
-        alert('您的私钥不能为空！');
+    if(password2==''){
+        alert('您的密码不能为空！');
         return false;
     }
     else {
@@ -95,7 +95,7 @@ function convert() {
             dataType: "json",//预期前端发给后端的数据类型
             url: "http://localhost:8080/api/applyscore",//url地址
             data: {
-                'yourpublic2': yourpublic2, 'yourprivate2': yourprivate2,
+                'id2': id2, 'password2': password2,
                 'card_number2': card_number2, 'score_number2': score_number2
             },
             success: function (result) {
@@ -123,4 +123,40 @@ document.querySelector('.cont_form_sign_up').style.display = "none";
 document.querySelector('.cont_form_login').style.display = "none";
 },500);  
   
-  }
+}
+
+
+
+function showscore() {
+    var id=$("#id").val();
+    var password=$("#password").val();
+
+
+    if(id==''){
+        alert('您的用户名不能为空！');
+        return false;
+    }
+    if(password==''){
+        alert('您的密码不能为空！');
+        return false;
+    }
+    else {
+        $.ajax({
+            type: "POST",//HTTP请求方法类型
+            dataType: "json",//预期前端发给后端的数据类型
+            url: "http://localhost:8080/api/showscore",//url地址
+            data: {
+                'id': id, 'password': password
+            },
+            success: function (result) {
+                if (result.resultCode == 200) {
+                    alert('您的积分数额为：'+result.score_number)
+                }
+                ;
+            },
+            error: function () {
+                alert("查询异常！");
+            }
+        });
+    }
+}
