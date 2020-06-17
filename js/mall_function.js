@@ -23,7 +23,7 @@ function moneybuy(score_number) {
                 ;
             },
             error: function () {
-                alert("购买异常！"+id);
+                alert("购买异常！");
             }
         });
     }

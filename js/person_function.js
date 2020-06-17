@@ -38,8 +38,6 @@ function present(){
             }
         });
     }
-    action="#";
-    submit();
 }
 
 
