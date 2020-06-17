@@ -44,7 +44,7 @@ function present(){
 
 
 
-function showscore() {
+function showscoreP() {
     var id=$("#id").val();
     var password=$("#password").val();
 
@@ -66,9 +66,9 @@ function showscore() {
                 'id': id, 'password': password
             },
             success: function (result) {
-                if (result.resultCode == 200) {
+
                     alert('您的积分数额为：'+result.score_number)
-                }
+
                 ;
             },
             error: function () {
