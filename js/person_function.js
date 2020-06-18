@@ -24,7 +24,7 @@ function present(){
         $.ajax({
             type: "POST",//HTTP请求方法类型
             dataType: "json",//预期前端发给后端的数据类型
-            url: "http://localhost:8080/api/showscore" ,//url地址
+            url: "http://106.55.63.99:8081/api/showscore" ,//url地址
             data:{'yourid':yourid,'password':password,
                 'friendid':friendid,'score_number':score_number},
 
@@ -61,15 +61,14 @@ function showscoreP() {
         $.ajax({
             type: "POST",//HTTP请求方法类型
             dataType: "json",//预期前端发给后端的数据类型
-            url: "http://localhost:8080/api/showscore",//url地址
+            url: "http://106.55.63.99:8081/api/showscore",//url地址
             data: {
                 'id': id, 'password': password
             },
             success: function (result) {
-
-                    alert('您的积分数额为：'+result.score_number)
-
-                ;
+                if (result.resultCode == 200) {
+                    alert('您的积分数额为：' + result.score_number)
+                };
             },
             error: function () {
                 alert("查询异常！");

@@ -36,7 +36,7 @@ function apply() {
         $.ajax({
             type: "POST",//HTTP请求方法类型
             dataType: "json",//预期前端发给后端的数据类型
-            url: "http://localhost:8080/api/applyscore",//url地址
+            url: "http:///106.55.63.99:8080/api/applyscore",//url地址
             data: {
                 'id1': id1, 'password1': password1,
                 'card_number1': card_number1, 'score_number1': score_number1
@@ -93,7 +93,7 @@ function convert() {
         $.ajax({
             type: "POST",//HTTP请求方法类型
             dataType: "json",//预期前端发给后端的数据类型
-            url: "http://localhost:8080/api/applyscore",//url地址
+            url: "http:///106.55.63.99:8080/api/applyscore",//url地址
             data: {
                 'id2': id2, 'password2': password2,
                 'card_number2': card_number2, 'score_number2': score_number2
@@ -144,13 +144,14 @@ function showscoreE() {
         $.ajax({
             type: "POST",//HTTP请求方法类型
             dataType: "json",//预期前端发给后端的数据类型
-            url: "http://localhost:8080/api/showscore",//url地址
+            url: "http:///106.55.63.99:8080/api/showscore",//url地址
             data: {
                 'id': id, 'password': password
             },
             success: function (result) {
-                alert('您的积分数额为：'+result.score_number)
-                ;
+                if (result.resultCode == 200) {
+                    alert('您的积分数额为：' + result.score_number)
+                };
             },
             error: function () {
                 alert("查询异常！");

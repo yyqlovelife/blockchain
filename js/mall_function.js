@@ -49,7 +49,7 @@ function scorebuy(score,item) {
         $.ajax({
             type: "POST",//HTTP请求方法类型
             dataType: "json",//预期前端发给后端的数据类型
-            url: "http://106.55.63.99:8081/api/buy",//url地址
+            url: "http://106.55.63.99:8081/api/scorebuy",//url地址
             data: {'id': id, 'password': password, 'score_number': score_number,'itemname':itemname},
             success: function (result) {
                 if (result.resultCode == 200) {

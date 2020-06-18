@@ -29,7 +29,7 @@ function register() {
         $.ajax({
             type: "POST",//HTTP请求方法类型
             dataType: "json",//预期前端发给后端的数据类型
-            url: "http://localhost:8080/api/register" ,//url地址
+            url: "http:///106.55.63.99:8081/api/register" ,//url地址
             data:{'id':id,'password':password,'address':address,
                 'card_number':card_number,'tel_number':tel_number},
             success: function (result) {
