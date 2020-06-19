@@ -1,6 +1,7 @@
-function moneybuy(score,item) {
+function moneybuy(score,item,brand) {
     var score_number=score
     var itemname=item
+    var brandid=brand
     var id=prompt("为了确保您的安全，请再次输入您的用户名","")
     var password=prompt("请输入您的密码","")
     if(id==''){
@@ -17,7 +18,7 @@ function moneybuy(score,item) {
             type: "POST",//HTTP请求方法类型
             dataType: "json",//预期前端发给后端的数据类型
             url: "http://106.55.63.99:8081/api/moneybuy",//url地址
-            data: {'id':id,'password':password,'score_number': score_number,'itemname':itemname},
+            data: {'id':id,'password':password,'score_number': score_number,'itemname':itemname,'brandid':brandid},
             success: function (result) {
                 if (result.statecode==1){
                     alert('用户名密码错误，请重新操作')
@@ -35,9 +36,10 @@ function moneybuy(score,item) {
 
 }
 
-function scorebuy(score,item) {
+function scorebuy(score,item,brand) {
     var score_number=score
     var itemname=item
+    var brandid=brand
     var id=prompt("为了确保您的安全，请再次输入您的用户名")
     var password=prompt("请输入您的密码")
     if(id==''){
@@ -53,7 +55,7 @@ function scorebuy(score,item) {
             type: "POST",//HTTP请求方法类型
             dataType: "json",//预期前端发给后端的数据类型
             url: "http://106.55.63.99:8081/api/scorebuy",//url地址
-            data: {'id': id, 'password': password, 'score_number': score_number,'itemname':itemname},
+            data: {'id': id, 'password': password, 'score_number': score_number,'itemname':itemname,'brandid':brandid},
             success: function (result) {
                 if (result.statecode==1){
                     alert('用户名密码错误，请重新操作')
